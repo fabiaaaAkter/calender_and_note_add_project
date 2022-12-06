@@ -1,7 +1,5 @@
-
-void SetColorAndBackground ( int ForgC , int BackC )
-{
-     WORD wColor = ( ( BackC & 0x0F ) < < 4 ) + ( ForgC & 0x0F ) ;
-     SetConsoleTextAttribute ( GetStdHandle ( STD_OUTPUT_HANDLE ) , wColor ) ;
-     return ;
+int check_leapYear ( int year ) {  //checks whether the year passed is leap year or not
+    if ( year % 400 = = 0 || ( year % 100 ! = 0 & & year % 4 = =0 ) )
+       return 1 ;
+    return 0 ;
 }
